@@ -140,4 +140,6 @@ function! Wipeout()
   endtry
 endfunction
 
+execute pathogen#infect()
+
 " EOF
