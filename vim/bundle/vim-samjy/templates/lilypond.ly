@@ -4,7 +4,7 @@
 
 \header {
   title = ""
-  % composer = "Samuel Jaillet"
+  % composer = ":D"
   % opus = "Op 0.1"
   tagline = ""
 }
