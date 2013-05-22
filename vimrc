@@ -94,11 +94,6 @@ filetype plugin on
 
 inoremap <C-Tab> <Esc>
 
-" Templates
-au bufNewFile *.py 0r ~/.vim/templates/python.py
-au bufNewFile *.rst $r ~/.vim/templates/rst.rst
-au bufNewFile *.ly 0r ~/.vim/templates/lilypond.ly
-
 " Omnicompletion (<C-X> <C-O>)
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
