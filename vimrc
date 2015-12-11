@@ -88,7 +88,7 @@ set encoding=utf-8
 
 set wildmenu
 
-set directory=/tmp
+set directory=$HOME/.vimswap//
 
 filetype plugin on
 
