@@ -1,12 +1,6 @@
 
-:author:
-:date:
 
-.. contents:: Table of Contents
-
-.. sectnum::
-  :depth: 3
-
-
+:author: Sam
+:date: [:VIM_EVAL:]strftime('%Y-%m-%d')[:END_EVAL:]
 
 .. EOF
