@@ -28,3 +28,6 @@
 [submodule "vim/bundle/vim-beancount"]
 	path = vim/bundle/vim-beancount
 	url = https://github.com/nathangrigg/vim-beancount
+[submodule "vim/bundle/vim-vue"]
+	path = vim/bundle/vim-vue
+	url = https://github.com/posva/vim-vue.git
