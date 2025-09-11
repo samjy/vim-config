@@ -11,3 +11,7 @@ hi MatchParen cterm=none ctermbg=cyan ctermfg=white
 
 " search for *.po translations strings to fix
 command TranslationSearch normal /^msgstr\(\[.*\]\)\? ""\n\([^"#]\|$\)\|^#, fuzzy
+
+" execute black when saving python files
+autocmd BufWritePre *.py execute ':Black'
+"nnoremap <F9> :Black<CR>
