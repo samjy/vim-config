@@ -137,4 +137,9 @@ endfunction
 
 execute pathogen#infect()
 
+
+let g:black_virtualenv = "~/envs/black"
+
+set mouse=
+
 " EOF
