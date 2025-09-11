@@ -9,4 +9,5 @@ autocmd BufNewFile * %substitute#\[:VIM_EVAL:\]\(.\{-\}\)\[:END_EVAL:\]#\=eval(s
 " color for match parenthesis
 hi MatchParen cterm=none ctermbg=cyan ctermfg=white
 
-command TranslationSearch normal /^msgstr\(\[.*\]\)\? ""\n\([^"#]\|$\)
+" search for *.po translations strings to fix
+command TranslationSearch normal /^msgstr\(\[.*\]\)\? ""\n\([^"#]\|$\)\|^#, fuzzy
