@@ -34,3 +34,6 @@
 [submodule "vim/bundle/black"]
 	path = vim/bundle/black
 	url = https://github.com/psf/black.git
+[submodule "vim/bundle/vim-plantuml"]
+	path = vim/bundle/vim-plantuml
+	url = https://github.com/aklt/plantuml-syntax
