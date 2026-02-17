@@ -37,3 +37,6 @@
 [submodule "vim/bundle/vim-plantuml"]
 	path = vim/bundle/vim-plantuml
 	url = https://github.com/aklt/plantuml-syntax
+[submodule "vim/bundle/vim-terraform"]
+	path = vim/bundle/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
