@@ -17,7 +17,7 @@ setlocal suffixesadd=.py
 setlocal comments-=:%
 setlocal commentstring=#%s
 
-setlocal textwidth=79
+setlocal textwidth=120
 
 setlocal tabstop=4
 setlocal softtabstop=4
@@ -53,6 +53,6 @@ if has("gui_win32") && !exists("b:browsefilter")
 		       \ "All Files (*.*)\t*.*\n"
 endif
 
-au BufEnter,BufCreate,WinEnter * call matchadd('TooLong', '\%>80v.\+', -1)
+au BufEnter,BufCreate,WinEnter * call matchadd('TooLong', '\%>120v.\+', -1)
 au BufEnter,BufCreate,WinEnter * call matchadd('TrailingSpaces', '\s\+$', -1)
 au BufEnter,BufCreate,WinEnter * call matchadd('Nbsp', ' ', -1)

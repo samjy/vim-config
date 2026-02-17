@@ -164,6 +164,9 @@ function! CommentLine()
   " for RST files use .."
   elseif file_name =~ '\.rst$'
     execute ":silent! normal ^gI.. \<ESC>\<down>^"
+  " for .py use #
+  elseif file_name =~ '\.py$'
+    execute ":silent! normal ^i# \<ESC>\<down>^"
   " for all other files use # 
   else
     execute ":silent! normal ^i#\<ESC>\<down>^"
@@ -212,6 +215,9 @@ function! UnCommentLine()
   " for RST files use ..
   elseif file_name =~ '\.rst$'
     execute ":silent! normal :nohlsearch\<CR>:s/.. //\<CR>:nohlsearch\<CR>"
+  " for .py files use #
+  elseif file_name =~ '\.py$'
+    execute ":silent! normal :nohlsearch\<CR>:s/\\# \\?//\<CR>:nohlsearch\<CR>"
   " for all other files use # 
   else
     execute ":silent! normal :nohlsearch\<CR>:s/\\#//\<CR>:nohlsearch\<CR>"
@@ -280,6 +286,10 @@ function! RangeCommentLine()
   " for RST files use ..
   elseif file_name =~ '\.rst$'
     execute ":silent! normal ^gI.. \<ESC>\<down>^"
+  " for .py files use #
+  elseif file_name =~ '\.py$'
+    " TODO place the # on the last space column of all lines
+    execute ":silent! normal :s/\\S/\\# \\0/\<CR>:nohlsearch<CR>"
   " for all other files use #  
   else
     execute ":silent! normal :s/\\S/\\#\\0/\<CR>:nohlsearch<CR>"
@@ -327,6 +337,9 @@ function! RangeUnCommentLine()
   " for RST use ..
   elseif file_name =~ '\.rst$'
     execute ":silent! normal :s/.. //\<CR>:nohlsearch\<CR>"
+  " for .py use #
+  elseif file_name =~ '\.py$'
+    execute ":silent! normal :s/\\# \\?//\<CR>:nohlsearch\<CR>"
   " for all other files use # 
   else
     execute ":silent! normal :s/\\#//\<CR>:nohlsearch\<CR>"
