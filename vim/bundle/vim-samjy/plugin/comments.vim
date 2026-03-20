@@ -167,6 +167,9 @@ function! CommentLine()
   " for .py use #
   elseif file_name =~ '\.py$'
     execute ":silent! normal ^i# \<ESC>\<down>^"
+  " for .bean use ;
+  elseif file_name =~ '\.bean$'
+    execute ":silent! normal ^i; \<ESC>\<down>^"
   " for all other files use # 
   else
     execute ":silent! normal ^i#\<ESC>\<down>^"
@@ -218,6 +221,9 @@ function! UnCommentLine()
   " for .py files use #
   elseif file_name =~ '\.py$'
     execute ":silent! normal :nohlsearch\<CR>:s/\\# \\?//\<CR>:nohlsearch\<CR>"
+  " for .bean files use ;
+  elseif file_name =~ '\.bean$'
+    execute ":silent! normal :nohlsearch\<CR>:s/\\; \\?//\<CR>:nohlsearch\<CR>"
   " for all other files use # 
   else
     execute ":silent! normal :nohlsearch\<CR>:s/\\#//\<CR>:nohlsearch\<CR>"
@@ -290,6 +296,10 @@ function! RangeCommentLine()
   elseif file_name =~ '\.py$'
     " TODO place the # on the last space column of all lines
     execute ":silent! normal :s/\\S/\\# \\0/\<CR>:nohlsearch<CR>"
+  " for .bean files use ;
+  elseif file_name =~ '\.bean$'
+    " TODO place the # on the last space column of all lines
+    execute ":silent! normal :s/\\S/\\; \\0/\<CR>:nohlsearch<CR>"
   " for all other files use #  
   else
     execute ":silent! normal :s/\\S/\\#\\0/\<CR>:nohlsearch<CR>"
@@ -340,6 +350,9 @@ function! RangeUnCommentLine()
   " for .py use #
   elseif file_name =~ '\.py$'
     execute ":silent! normal :s/\\# \\?//\<CR>:nohlsearch\<CR>"
+  " for .bean use ;
+  elseif file_name =~ '\.bean$'
+    execute ":silent! normal :s/\\; \\?//\<CR>:nohlsearch\<CR>"
   " for all other files use # 
   else
     execute ":silent! normal :s/\\#//\<CR>:nohlsearch\<CR>"
